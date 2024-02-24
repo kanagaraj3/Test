@@ -1,0 +1,113 @@
+<div class="container d-flex justify-content-center">
+    <div class="weather">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <span class="icon"><img class="img-fluid" src="assets/img/rain.png"></span>
+                    <div class="title"><p>Chennai</p></div>
+                    <div class="temp">+20<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">47</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <span class="icon"><img class="img-fluid" src="assets/img/moon.png"></span>
+                    <div class="title"><p>Erode</p></div>
+                    <div class="temp">+18<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">20</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>                            
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <span class="icon"><img src="assets/img/sun.png"></span>
+                    <div class="title"><p>Coimbatore</p></div>
+                    <div class="temp">+17<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">General</div>
+                            <div class="value">Wind</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">52</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="card">
+                    <span class="icon"><img src="assets/img/breeze.png" ></span>
+                    <div class="title"><p>Salem <br>{{ selectedData.id }}</p></div>
+                    <div class="temp">+{{ selectedData.weatherTemp }}<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">Cloud</div>
+                            <div class="value">{{ selectedData.cloudInfo }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Wind Direction</div>
+                            <div class="value">{{ selectedData.weatherWindDirection }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Altitude</div>
+                            <div class="value">{{ selectedData.altitude }}</div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>                
+  </div>
+    
+    <div class="container-sm ">
+        <h2>Data Details</h2>
+        <ul>
+          <li><strong>Altitude:</strong> {{ selectedData.altitude }}</li>
+          <li><strong>Battery Info:</strong> {{ selectedData.batteryInfo }}</li>
+          <li><strong>Cloud Info:</strong> {{ selectedData.cloudInfo }}</li>
+          <li><strong>Created On:</strong> {{ selectedData.createdOn }}</li>
+          <li><strong>Device ID:</strong> {{ selectedData.deviceId }}</li>
+          <li><strong>ID:</strong> {{ selectedData.id }}</li>
+          <li><strong>Location:</strong> {{ selectedData.location }}</li>
+          <li><strong>Weather Humidity:</strong> {{ selectedData.weatherHumidity }}</li>
+          <li><strong>Weather Light Intensity:</strong> {{ selectedData.weatherLightIntens }}</li>
+          <li><strong>Weather Pressure:</strong> {{ selectedData.weatherPressure }}</li>
+          <li><strong>Weather Rain Rate:</strong> {{ selectedData.weatherRainRate }}</li>
+          <li><strong>Weather Temperature:</strong> {{ selectedData.weatherTemp }}</li>
+          <li><strong>Weather Wind Direction:</strong> {{ selectedData.weatherWindDirection }}</li>
+          <li><strong>Weather Wind Speed:</strong> {{ selectedData.weatherWindSpeed }}</li>
+        </ul>
+      </div>
+  

@@ -1,0 +1,374 @@
+
+.body
+{
+  background-color: white;
+}
+.container-sm-inner
+{
+  padding:0 40px;
+}
+/* Slidder css  start */
+.container-sm
+{
+    /* border: 2px solid red; */
+    height: auto;
+   /* margin-top: 100px ; */
+   background-color: white;
+  
+}
+
+.col-md-12
+{
+    /* height: 50px; */
+    /* border:  solid green; */
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.col-12
+{
+  border: 2px solid black;
+  height: 30px;
+}
+
+
+#weather-forecast-title
+{
+  width: auto;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-top: 10px;
+  padding-top: 10px;
+  height: 30px;
+  color: rgb(69, 69, 69);
+}
+#weather-con
+{
+    height:auto;
+ 
+}
+#weather-forecast-container
+{
+  border-radius: 10px;
+  background-color: whitesmoke !important;
+  box-shadow:5px 5px 5px 5px rgba(169, 161, 161, 0.5);
+}
+#weather-forecast-container, .pre-btn,
+.nxt-btn 
+{
+  background-color: white;
+}
+
+
+
+.weather-forecast{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+
+  }
+  
+  .weather-container {
+     padding: 0 10px; 
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+  }
+  
+  .weather-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .weather-card {
+    flex: 0 0 auto;
+    width: 90px;
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow:5px 5px 5px 5px rgba(75, 75, 75, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .weather-card .time
+  {
+    color: rgb(79, 78, 78);
+  }
+
+  .weather-card .temperature
+  {
+   font-size: 20px;
+   font-weight: bolder;
+  }
+  .arrow {
+    border: solid rgb(179, 179, 179);
+    border-width: 0 4px 4px 0;
+    padding: 5px;
+  }
+  .arrow:hover
+  {
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 7px;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  
+  .pre-btn,
+  .nxt-btn {
+     border:none;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left:0;
+    margin-left: 10px;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+    margin-right: 10px;
+  }
+  
+  /* Slidder css  end */
+  
+  
+
+
+/* Weather Current location Deatils */
+
+#weather-current-location
+{
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow:5px 5px 5px 5px rgba(172, 170, 170, 0.5);
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 10px;
+  /* min-width: 200px; */
+}
+
+#weather-current-location #city-wea, #city-img
+{
+  /* border: 2px solid black; */
+  height: 100px;
+}
+#weather-current-location #city-wea
+{
+ margin-right: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content:flex-start;
+ padding: 0;
+}
+#weather-current-location #city-img
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#weather-current-location .weather-city,.city-temperature
+{
+/* border: 2px solid black; */
+width: auto;
+height: 50px;
+}
+#weather-current-location .weather-city
+{
+font-size: 20px;
+text-transform: uppercase;
+color: rgb(255, 149, 0);
+font-weight: 700;
+padding-top: 15px;
+padding-left: 5px;
+text-align: center;
+}
+#weather-current-location .city-temperature
+{
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: center;
+}
+
+
+
+          /* Weather Details */
+
+
+ #weather-details-flex 
+{
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+} 
+
+#weather-details-flex .wea-con
+{
+  width: 280px;
+  height: 130px;
+  /* border: 2px solid black; */
+  border-radius: 15px;
+  background-color: whitesmoke;
+  box-shadow:5px 5px 5px 5px rgba(172, 170, 170, 0.5);
+}
+#container-sm-wea
+{
+  border-radius: 15px !important;
+  margin-top: 15px !important;
+  background-color: whitesmoke !important;
+  box-shadow:5px 5px 5px 5px rgba(75, 75, 75, 0.5);
+  padding-bottom:20px ;
+}
+.wea-con
+{
+  display: flex;
+  flex-direction:row;
+}
+.wea-con-details
+{
+  /* border: 2px solid black; */
+  height: 130px;
+  width: 120px;
+}
+.wea-con-img
+{
+  /* border: 2px solid black; */
+  height: 130px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.wea-con-details .wea-con-title
+{
+  /* border: 2px solid black; */
+  height: 60px;
+  padding-top: 40px;
+  padding-left: 30px;
+  color: rgb(78, 76, 76);
+}
+.wea-con-details  .wea-con-temp
+{
+  /* border: 2px solid black; */
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#weather-details-title
+{
+  padding-top:10px ;
+  padding-left: 15px;
+  color: rgb(69, 69, 69);
+}
+
+                 
+  /*Weather Search starting Part */
+
+  #weather-search-flex
+  {
+    /* border: 2px solid black; */
+    margin: 0;
+    display: flex;
+    min-height:50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #weather-search-flex #weather-search-logo,#weather-search-input,#btn-search
+  {
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+    box-shadow:5px 5px 5px 5px rgba(172, 170, 170, 0.5);
+  }
+  #weather-search-flex #weather-search-logo
+  {
+     width:10% ;
+     text-align: center;
+     padding-top: 10px;
+  }
+  #weather-search-flex #weather-search-input
+  {
+    min-width: auto;
+    width:80%;
+    cursor: pointer;
+    text-align: center;
+  }
+
+    /* Weather details end part */
+
+
+
+
+    /* Media Query Part */
+
+@media all and (max-width:500px) 
+{
+
+.wea-con
+{
+  display: flex;
+  flex-direction:row;
+  /* border: 2px solid black; */
+  width: 100% !important;
+}
+.wea-con-details
+{
+  /* border: 2px solid black; */
+  width: 300px;
+  height: 130px;
+}
+.wea-con-img
+{
+  /* border: 2px solid black; */
+  height: 130px;
+  width:100px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.wea-con-details .wea-con-title
+{
+  /* border: 2px solid black; */
+  height: 60px;
+  padding-top: 40px;
+  padding-left: 30px;
+  color: rgb(78, 76, 76);
+  text-align: center;
+}
+.wea-con-details  .wea-con-temp
+{
+  /* border: 2px solid black; */
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+}

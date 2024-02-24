@@ -1,0 +1,119 @@
+<div class="body">
+<div class="container-sm">
+    <div class="container-sm-inner">
+    <div class="row">
+        <div class="col-md-12" id="weather-search">
+            <div id="weather-search-flex">
+                    <div id="weather-search-logo">D C</div>
+                    <select [(ngModel)]="selectedCity"  id="weather-search-input" (change)="search()" >
+                      <option value="">Select City to Search Weather</option>
+                      <option value="230800">Kumbakonam</option>
+                      <option value="230802">Nasiyanor</option>
+                      <option value="240801">IITM</option>
+                      <option value="45007">Pariyur</option>
+                    </select>
+            </div>
+        </div>
+        <div class="col-12 col-6 col-md-4 col-lg-4 col-xl-3 " id="weather-current-location">
+            <div class="row" *ngFor="let weather of data.slice(0,1)">
+                <div class="col-7" id="city-wea">
+                    <div class="weather-city">{{weather.deviceId}}</div>
+                    <div class="city-temperature"> {{ weather.temperature.toFixed(0) }}<sup>&deg;</sup></div>
+                </div>
+                <div class="col-4" id="city-img">
+                    <fa-icon [ngClass]="weather.iconClass" [style.color]="weather.iconColor" class="fa-5x"></fa-icon>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-12" id="weather-con">
+            <div class="row" id="weather-forecast-container">
+                <div class="col-3" id="weather-forecast-title"><p>TODAY'S FORECAST</p></div>
+                <section class="weather-forecast"> 
+                    <div class="weather-container">
+                        <div *ngFor="let weather of data" class="weather-card">
+                            <div class="time">{{ weather.createdOn}}</div>
+                            <!-- <fa-icon [ngClass]="weather.iconClass" [style.color]="weather.iconColor"class="icons-wea fa-3x"></fa-icon> -->
+                            <div class="temperature">{{ weather.temperature.toFixed(0) }}<sup>&deg;</sup></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div  id="container-sm-wea">
+            <div id="weather-details-title">WEATHER DETAILS</div>
+            <div id="weather-details-flex" *ngFor="let weather of data.slice(0,1)">
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title">Humidity </div>
+                        <div class="wea-con-temp">{{weather.humidity }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <fa-icon [ngClass]="weather.iconClass" [style.color]="weather.iconColor" class="fa-5x"></fa-icon>
+                        <!-- <fa-icon [icon]="['fas', 'wind']" class="fa-4x" [styles]="{'color': '#005eff'}"></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title"> Altitude</div>
+                        <div class="wea-con-temp">{{weather.altitude}}</div>
+                    </div>
+                    <!-- <div class="wea-con-img"><i class="fa-solid fa-gauge fa-4x" style="color: #00ffaa;"></i> </div> -->
+                </div>
+                <div class="wea-con">
+                 <div class="wea-con-details"> 
+                        <div class="wea-con-title">Cloud Info </div>
+                        <div class="wea-con-temp">{{ weather.cloudInfo }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <!-- <fa-icon [icon]="['fab', 'cloudversify']" class="fa-5x" [styles]="{'color': '#00bfff'}"></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title">Light Intens</div>
+                        <div class="wea-con-temp"> {{ weather.weatherLightIntens }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <!-- <fa-icon [icon]="['fas', 'snowflake']" class="fa-5x" [styles]="{'color': '#00fbff'}" ></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title"> Pressure </div>
+                        <div class="wea-con-temp">{{ weather.weatherPressure }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <!-- <fa-icon [icon]="['fas', 'up-down']" class="fa-4x" [styles]="{'color': '#1603a5'}" ></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title">Wind Speed </div>
+                        <div class="wea-con-temp">{{ weather.weatherWindSpeed }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <!-- <fa-icon [icon]="['fas', 'fan']" class="fa-spin fa-4x" [styles]="{'color': '#ff7b00'}" ></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title"> WindDirection</div>
+                        <div class="wea-con-temp">{{ weather.weatherWindDirection }}</div>
+                    </div>
+                    <div class="wea-con-img">
+                        <!-- <fa-icon [icon]="['fas', 'compass']" class="fa-4x" [styles]="{'color': '#420061'}" ></fa-icon> -->
+                      </div>
+                </div>
+                <div class="wea-con">
+                    <div class="wea-con-details"> 
+                        <div class="wea-con-title">ID </div>
+                        <div class="wea-con-temp"> {{ weather.id }}</div>
+                    </div>
+                    <!-- <div class="wea-con-img"><fa-icon [icon]="['fas', 'long-arrow-alt-down']" class="mx-2" size="5x" [styles]="{'color': 'blue'}"></fa-icon> </div> -->
+                </div>
+            </div>
+       </div>
+    </div>
+  </div>
+
+ 
